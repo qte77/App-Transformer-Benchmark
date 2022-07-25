@@ -22,6 +22,14 @@
 # ## Pre-Requisites
 
 # %%
+# ### Install modules
+# TODO mount project folder or download from github
+# !{sys.executable} -m pip install pipenv
+# !{sys.executable} -m pipenv install
+# !{sys.executable} -m pip install -q watermark
+# %watermark -a qte77 -gu qte77 -ws qte77.github.io -u -i -v -iv
+
+# %%
 # ### Import modules
 from sys import exit
 from logging import basicConfig, DEBUG, \
@@ -52,8 +60,10 @@ class App():
     """App object"""
 
     @staticmethod
-    def get_self_name():
-        debug('This is app speaking')
+    def get_heartbeat() -> str:
+        msg = 'This is app speaking'
+        debug(msg)
+        return msg
 
 #main = launch_new_instance = App.launch_instance
 
@@ -61,7 +71,7 @@ class App():
 if __name__ == "__main__":
     # main()
     # exit(main)
-    App().get_self_name()#!/usr/bin/env python
+    App().get_heartbeat()#!/usr/bin/env python
 # ---
 # jupyter:
 #   jupytext:

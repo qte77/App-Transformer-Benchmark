@@ -19,6 +19,16 @@ Types of changes:
 - Things to come
 - Move to new version section if completed
 
+## [0.7.0] - 2022-07-25
+
+### Added
+
+- README with definition of MVP's must, should, could and won't features
+
+### Removed
+
+- test/ because TDD only defined as MVP could and in contrast to current papermill pipeline and workflow
+
 ## [0.6.0] - 2022-07-22
 
 ### Added

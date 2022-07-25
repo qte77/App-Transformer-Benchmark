@@ -211,9 +211,16 @@ Explore the app with Jupyter notebooks.
     * Use `papermill` to sweep over config
     * `papermill` crashes Colab kernel, use StudioLab?
   * [ ] MVP with Python only
+    * Product with least possible feature set
+    * Must: BERT archs and benchmarking, papermill, helping functionality into submodules
+    * Should: flake8, black, isort, sphinx docs
+    * Could: TDD, pytest, tox, hydra config
+    * Won't: Dockerfile, K8s, API
+  * [ ] Iterate
 * Project
   * [x] Load models, datasets, tokenizer and metrics from Hugging Face 
   * [x] Sweep-PoC with WandB
+  * [x] Define features that must, should, could and won't be contained in MVP 
   * [ ] Sweep over optimizer (Adam, SGD, RMSProp, SWA, AWS AdaTune), not activation
   * [ ] Extract helper functions into modules
   * [ ] Load different BERT archs/specs/configs with HF benchmark.py as baseline

@@ -1,6 +1,6 @@
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "-raXs --durations 10 --color=yes --code-highlight=yes" # --doctest-module
+addopts = "-raX -svv --durations 10 --color=yes --code-highlight=yes" # --doctest-module
 testpaths = [
     "tests",
 #    "integration",
