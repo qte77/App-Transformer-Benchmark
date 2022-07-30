@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # ---
 # jupyter:
 #   jupytext:
@@ -12,11 +13,11 @@
 #     name: python3
 # ---
 
-# %% [markdown]
-# # BERT Benchmarking
-
 # %%
 """Entrypoint of the app"""
+
+# %% [markdown]
+# # BERT Benchmarking
 
 # %% [markdown]
 # ## Pre-Requisites
@@ -24,18 +25,19 @@
 # %%
 # ### Install modules
 # TODO mount project folder or download from github
-# !{sys.executable} -m pip install pipenv
-# !{sys.executable} -m pipenv install
-# !{sys.executable} -m pip install -q watermark
+# from sys import executable, exit
+# !{executable} -m pip install pipenv
+# !{executable} -m pipenv install
+# !{executable} -m pipenv shell
 # %watermark -a qte77 -gu qte77 -ws qte77.github.io -u -i -v -iv
 
 # %%
 # ### Import modules
-from sys import exit
-from logging import basicConfig, DEBUG, \
-    debug #, info, error, warning, critical
+# TODO export into helper
+# from logging import basicConfig, DEBUG, \
+#     debug #, info, error, warning, critical
 
-from _version import __version__
+from _version import __version__ as ver
 from helper.load_save_hf import load_and_save_model, \
     load_and_save_dataset, load_and_save_tokenizer, \
         load_and_save_metrics
@@ -56,85 +58,10 @@ basicConfig(level = log_level, format = log_format)
 # ### PM Parameters End
 
 # %%
-class App():
-    """App object"""
-
-    @staticmethod
-    def get_heartbeat() -> str:
-        msg = 'This is app speaking'
-        debug(msg)
-        return msg
-
-#main = launch_new_instance = App.launch_instance
-
-# %%
-if __name__ == "__main__":
-    # main()
-    # exit(main)
-    App().get_heartbeat()#!/usr/bin/env python
-# ---
-# jupyter:
-#   jupytext:
-#     text_representation:
-#       extension: .py
-#       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.14.0
-#   kernelspec:
-#     display_name: Python 3
-#     name: python3
-# ---
-
-# %% [markdown]
-# # BERT Benchmarking
-
-# %%
-"""Entrypoint of the app"""
-
-# %% [markdown]
-# ## Pre-Requisites
-
-# %%
-# ### Import modules
-from sys import exit
-from logging import basicConfig, DEBUG, \
-    debug #, info, error, warning, critical
-
-from _version import __version__
-from helper.load_save_hf import load_and_save_model, \
-    load_and_save_dataset, load_and_save_tokenizer, \
-        load_and_save_metrics
-
-# %%
-# ###
-basicConfig(
-    level = DEBUG,
-    format = '[%(levelname)s] %(asctime)s - %(process)d - %(message)s'
-)
-
-# %% [markdown]
-# ## Papermill parameters
-# ### PM Start in the following code cell
-
-# %% tags=["parameters"]
-
-# %% [markdown]
-# ### PM Parameters End
-
-# %%
-class App():
-    """App object"""
-
-    @staticmethod
-    def get_self_name():
-        debug('This is app speaking')
-
-#main = launch_new_instance = App.launch_instance
-
 def main():
-    App().get_self_name()
+    msg = 'This is app speaking'
+    print(msg)
+    debug(msg)
 
-# %%
 if __name__ == "__main__":
-    exit(main())
-    # exit(main)
+    exit(main)
