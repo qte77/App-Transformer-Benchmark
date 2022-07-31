@@ -21,6 +21,8 @@ wandb = "==0.12.21"
 # transformers "==4.20.1"
 # torch ==1.11.0 #+cu113"
 # numpy = "==1.21.6"
+# hydra= "==1.2"
+# omegaconf= "2.2.2"
 
 [dev-packages]
 black = "*"

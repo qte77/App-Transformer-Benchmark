@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-file MD033 - Inline HTML -->
 # ML Pipeline
 
 [![CodeQL](https://github.com/qte77/ML-HF-WnB-MVP/actions/workflows/codeql.yml/badge.svg)](https://github.com/qte77/ML-HF-WnB-MVP/actions/workflows/codeql.yml)
