@@ -18,6 +18,9 @@ Types of changes:
 [Unreleased]
 ---
 
+[1.0.0] - 2022-08-05
+---
+
 Major restructuring of the project to align with current qte77's SOTA project structure.
 
 ### Added
