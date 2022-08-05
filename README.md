@@ -1,5 +1,5 @@
-<!-- markdownlint-disable-file MD033 - Inline HTML -->
-# ML Pipeline
+ML Pipeline
+===
 
 [![CodeQL](https://github.com/qte77/ML-HF-WnB-MVP/actions/workflows/codeql.yml/badge.svg)](https://github.com/qte77/ML-HF-WnB-MVP/actions/workflows/codeql.yml)
 [![Lint Code Base](https://github.com/qte77/ML-HF-WnB-MVP/actions/workflows/linter.yml/badge.svg)](https://github.com/qte77/ML-HF-WnB-MVP/actions/workflows/linter.yml)
@@ -8,11 +8,15 @@
 
 App for benchmarking different BERT-Architectures using a pipeline with Hugging Face (HF) and Weights&Biases (WandB).
 
-## Status
+Status
+---
 
-**[WIP]** **[DRAFT]** **----> Not fully implemented <----**
+**[DRAFT]** **[WIP]** **----> Not fully implemented yet**
 
-## Quickstart
+The current version is <1.0.0>. For version history have a look at [CHANGELOG.md](./CHANGELOG.md).
+
+Quickstart
+---
 
 Explore the app with Jupyter notebooks.
 
@@ -29,7 +33,8 @@ Explore the app with Jupyter notebooks.
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb)
 [![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb)
 
-## TOC
+TOC
+---
 
 * [Usage](#usage-)
 * [Install](#install-)
@@ -41,7 +46,8 @@ Explore the app with Jupyter notebooks.
 * [TODO](#todo-)
 * [Rescources](#resources-)
 
-## Usage [↑](#toc)
+Usage [↑](#toc)
+---
 
 ### Run
 
@@ -55,24 +61,29 @@ Explore the app with Jupyter notebooks.
   * Read from `wandb_keyfile` in `/app/config/wandb.yml`
   * Format expected like `/app/config/wandb-key-dummy.yml`
 
-## Install [↑](#toc)
+Install [↑](#toc)
+---
 
 * Local: `make setup_local`
 * Local dev: `make setup_local_dev`
 
-## Reason [↑](#toc)
+Reason [↑](#toc)
+---
 
 * **TODO**
 
-## Purpose [↑](#toc)
+Purpose [↑](#toc)
+---
 
 * BERT arch/specs/config
 
-## Paradigms [↑](#toc)
+Paradigms [↑](#toc)
+---
 
 * **TODO**
 
-## App structure [↑](#toc)
+App structure [↑](#toc)
+---
 
 ### Essential
 
@@ -157,7 +168,8 @@ Explore the app with Jupyter notebooks.
 </pre>
 </details>
 
-## App Details [↑](#toc)
+App Details [↑](#toc)
+---
 
 ### Simple pipeline with commercial vendors
 
@@ -192,7 +204,7 @@ Explore the app with Jupyter notebooks.
 * WandB, [Website](https://wandb.ai/site), [Docs](https://wandb.ai/site), [Github](https://github.com/wandb)
   * 'The developer-first MLOps platform'
   * 'Build better models faster with experiment tracking, dataset versioning, and model management'
-  * Products: Dashboard, Sweeps, Artifacts, Reports, Tables 
+  * Products: Dashboard, Sweeps, Artifacts, Reports, Tables
 * Compute Resources
   * [Google Colab](https://colab.research.google.com/), [Limitations and restrictions](https://research.google.com/colaboratory/faq.html#limitations-and-restrictions), [Resource limits](https://research.google.com/colaboratory/faq.html#resource-limits)
   * [AWS Sagemaker StudioLab](https://studiolab.sagemaker.aws/), [FAQ](https://studiolab.sagemaker.aws/faq)
@@ -200,7 +212,8 @@ Explore the app with Jupyter notebooks.
   * [Binder](https://mybinder.org/), [Docs](https://mybinder.readthedocs.io/), [Github](https://github.com/jupyterhub/binderhub), [Examples](https://github.com/binder-examples), [Get badge](https://mybinder.org/)
     * Disclaimer: supported/run by/on Google Cloud (GCE), OVH, GESIS Notebooks, Turing Institute
 
-## TODO [↑](#toc)
+TODO [↑](#toc)
+---
 
 * Milestones
   * [x] Exploration and PoC with Jupyter
@@ -220,9 +233,9 @@ Explore the app with Jupyter notebooks.
     * Won't: Dockerfile, K8s, API
   * [ ] Iterate
 * Project
-  * [x] Load models, datasets, tokenizer and metrics from Hugging Face 
+  * [x] Load models, datasets, tokenizer and metrics from Hugging Face
   * [x] Sweep-PoC with WandB
-  * [x] Define features that must, should, could and won't be contained in MVP 
+  * [x] Define features that must, should, could and won't be contained in MVP
   * [ ] Sweep over optimizer (Adam, SGD, RMSProp, SWA, AWS AdaTune), not activation
   * [ ] Extract helper functions into modules
   * [ ] Load different BERT archs/specs/configs with HF benchmark.py as baseline
@@ -242,7 +255,7 @@ Explore the app with Jupyter notebooks.
   * [ ] Consistent usage of `if` or `try` for features and catches
   * [ ] Try `arparse`
   * [ ] Try `Logger` instead of `print()`
-  * [ ] Consistent use of pydoc for auto-gen `sphinx` or `pandoc` 
+  * [ ] Consistent use of pydoc for auto-gen `sphinx` or `pandoc`
   * [ ] Test `__init__.py` for pkg
   * [ ] Test `setup.py` for wheel
 * Best Practices
@@ -256,7 +269,8 @@ Explore the app with Jupyter notebooks.
   * [ ] Adhere to [Docker BP](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
   * [ ] Adhere to BP from [The Hitchhiker's Guide to Python!](https://docs.python-guide.org/)
 
-## Resources [↑](#toc)
+Resources [↑](#toc)
+---
 
 * BERT (2018)
   * <a href="https://arxiv.org/abs/1810.04805" alt="BERT Paper">Paper</a>, <a href="https://github.com/google-research/bert" alt="BERT Github">Github</a>

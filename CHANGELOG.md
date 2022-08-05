@@ -1,5 +1,5 @@
-<!-- markdownlint-disable-file MD024 - Multiple Headings with same Content -->
-# Changelog
+Changelog
+===
 
 All notable changes to this project will be documented in this file.
 
@@ -15,12 +15,30 @@ Types of changes:
 - `Fixed` for any bug fixes.
 - `Security` in case of vulnerabilities.
 
-## [Unreleased]
+[Unreleased]
+---
 
-- Things to come
-- Move to new version section if completed
+Major restructuring of the project to align with current qte77's SOTA project structure.
 
-## [0.7.0] - 2022-07-25
+### Added
+
+- App: `__version__.py`, `py.typed`
+- Tools config: `.bumpversion`, `flake8`, `.markdownlint.yml`, `.pre-commit-config.yaml`
+
+### Changed
+
+- Project: `Pipfile`, `Pipfile.lock`, `pyproject.toml`
+- App: `_version.py`
+- git: `.gitignore`, `.gitmessage`
+- gh-actions: `dependabot.yml`, `codeql.yml`, `links-fail-fast.yml`, `linter.yml`
+- MDs to adopt markdownlint.yml
+
+### Removed
+
+- git: `ISSUE_TEMPLATE.md`
+
+[0.7.0] - 2022-07-25
+---
 
 ### Added
 
@@ -30,7 +48,8 @@ Types of changes:
 
 - test/ because TDD only defined as MVP could and in contrast to current papermill pipeline and workflow
 
-## [0.6.0] - 2022-07-22
+[0.6.0] - 2022-07-22
+---
 
 ### Added
 
@@ -44,7 +63,8 @@ Types of changes:
 - app/app.py `logger`added for transition from `print()`
 - app/helper/load_save_hf.py added TODO for decorators and get/setattr()
 
-## [0.5.0] - 2022-07-21
+[0.5.0] - 2022-07-21
+---
 
 ### Added
 
@@ -60,7 +80,8 @@ Types of changes:
 
 - ./app/.python-version because Pipfile `[requires]` specific python version
 
-## [0.4.0] - 2022-07-21
+[0.4.0] - 2022-07-21
+---
 
 ### Added
 
@@ -72,7 +93,8 @@ Types of changes:
 - Pydoc comments from `'` to `"`
 - Generated current `app.ipynb` with label `py_to_nb` from `Makefile`
 
-## [0.3.0] - 2022-07-20
+[0.3.0] - 2022-07-20
+---
 
 ### Added
 
@@ -82,7 +104,8 @@ Types of changes:
 
 - Minor changes and renames
 
-## [0.2.0] - 2022-07-20
+[0.2.0] - 2022-07-20
+---
 
 ### Added
 
@@ -93,7 +116,8 @@ Types of changes:
 
 - Module `convertNbToPm` because conversion is done with `Makefile`
 
-## [0.1.0] - 2022-07-19
+[0.1.0] - 2022-07-19
+---
 
 ### Added
 

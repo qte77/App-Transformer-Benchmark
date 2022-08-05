@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""Version like https://semver.org."""
-__version__: str = '0.4.0'
-__author__ = "qte777"
-# __email__ = '@'
+__version__: str = "0.z.0"
+__authors__: str = "qte77"
+# __email__ : str = '@'
