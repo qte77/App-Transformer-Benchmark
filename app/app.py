@@ -34,13 +34,15 @@
 # %%
 # ### Import modules
 # TODO export into helper
-# from logging import basicConfig, DEBUG, \
-#     debug #, info, error, warning, critical
+from logging import basicConfig, DEBUG, debug
 
-from _version import __version__ as ver
-from helper.load_save_hf import load_and_save_model, \
-    load_and_save_dataset, load_and_save_tokenizer, \
-        load_and_save_metrics
+# from __version__ import __version__ as ver
+# from helper.load_save_hf import (
+#     load_and_save_model,
+#     load_and_save_dataset,
+#     load_and_save_tokenizer,
+#     load_and_save_metrics
+# )
 
 # %%
 # ###
@@ -57,11 +59,13 @@ basicConfig(level = log_level, format = log_format)
 # %% [markdown]
 # ### PM Parameters End
 
+
 # %%
 def main():
     msg = 'This is app speaking'
     print(msg)
     debug(msg)
+
 
 if __name__ == "__main__":
     exit(main)

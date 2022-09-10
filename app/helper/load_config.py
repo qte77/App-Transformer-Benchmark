@@ -1,16 +1,18 @@
 #!/usr/bin/env python
 """Load and return yaml configuration files"""
+
 from os.path import exists
 from typing import Any, Union
 from yaml import safe_load
 
-#TODO export config in files.yml to separate from program flow?
+# TODO export config in files.yml to separate from program flow?
 cfg_path = "../config"
-cfg_defaults = [ 
+cfg_defaults = [
     'defaults' 'task',
     'huggingface', 'wandb',
     'sweep', 'sweep-wandb'
 ]
+
 
 def get_config(
     cfg_name: str
