@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 datasets = "==2.3.2"
 PyYAML = "*"
-transformers = "==4.19.4"
+transformers = "==4.21.3"
 wandb = "==0.12.21"
 watermark = "*"
 # torch = "*"
