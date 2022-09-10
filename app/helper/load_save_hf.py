@@ -20,8 +20,8 @@ from transformers import AutoModel, AutoTokenizer
 from datasets import load_dataset, load_metric
 
 basicConfig(
-    level = DEBUG,
-    format = f"[%(levelname)s] %(asctime)s - %(process)d - %(message)s"
+    level=DEBUG,
+    format="[%(levelname)s] %(asctime)s - %(process)d - %(message)s"
 )
 
 
@@ -29,7 +29,7 @@ def load_and_save_model(
     model_name: str,
     model_dir: str,
     num_labels: int = None
-) -> Union[AutoModel, Exception]:
+): # -> Union[AutoModel, Exception]:
     """
     Load and save models from and to '<model_dir>/<model_name>' with '[num_labels]'.
     """
@@ -63,7 +63,7 @@ def load_and_save_dataset(
     dataset_name: str,
     dataset_dir: str,
     dataset_config: str = None
-) -> Union[load_dataset, Exception]:
+): # -> Union[load_dataset, Exception]:
     """
     Load and save datasets from and to <dataset_dir>/<dataset_name>/[config_name]
     """
@@ -86,7 +86,7 @@ def load_and_save_dataset(
         try:
             # data_files = { 'train': 'train' }
             # load_dataset(path = dataset_dir, data_files = data_files)
-            return load_dataset(path = dataset_dir)
+            return load_dataset(path=dataset_dir)
         except Exception as e:
             error(str(e))
             return e
@@ -95,13 +95,13 @@ def load_and_save_dataset(
 def _download_dataset(
     dataset_name: str,
     dataset_config: str = None
-) -> Union[load_dataset, Exception]:
+): # -> Union[load_dataset, Exception]:
     """
     Download and return <dataset_name> with [dataset_config] from Hugging Face
     """
 
     try:
-        if dataset_config == None:
+        if dataset_config is None:
             return load_dataset(dataset_name)
         else:
             return load_dataset(dataset_name, dataset_config)
@@ -112,7 +112,7 @@ def _download_dataset(
 def load_and_save_tokenizer(
     model_name: str,
     tokenizer_dir: str
-) -> Union[AutoTokenizer, Exception]:
+): # -> Union[AutoTokenizer, Exception]:
     """
     Load and save tokenizer from and to
         <tokenizer_dir>/<model_name>
@@ -123,8 +123,12 @@ def load_and_save_tokenizer(
         print(f"Downloading and saving tokenizer to {tokenizer_dir}")
         try:
             makedirs(tokenizer_dir)
-            tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, \
-                truncation=True, padding=True)
+            tokenizer = AutoTokenizer.from_pretrained(
+                model_name,
+                use_fast=True,
+                truncation=True,
+                padding=True
+            )
             tokenizer.save_pretrained(tokenizer_dir)
             return tokenizer
         except Exception as e:
@@ -144,7 +148,8 @@ def load_and_save_metrics(
     # metrics_dir: str = None
 ) -> dict[str, dict[str, Union[load_metric, Exception]]]:
     """
-    Load and save metrics with Metrics Builder Scripts from and to <metrics_dir>/<metric_name>
+    Load and save metrics with Metrics Builder Scripts from and to
+    <metrics_dir>/<metric_name>
     TODO local save metrics NOT IMPLEMENTED YET
     """
 
@@ -158,5 +163,8 @@ def load_and_save_metrics(
         except Exception as e:
             error(str(e))
             metrics_load_errors[metric] = e
-    
-    return { "metrics": metrics_loaded, "errors": metrics_load_errors }
+
+    return {
+        "metrics": metrics_loaded,
+        "errors": metrics_load_errors
+    }
