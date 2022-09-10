@@ -29,7 +29,7 @@ def load_and_save_model(
     model_name: str,
     model_dir: str,
     num_labels: int = None
-): # -> Union[AutoModel, Exception]:
+):  # -> Union[AutoModel, Exception]:
     """
     Load and save models from and to '<model_dir>/<model_name>' with '[num_labels]'.
     """
@@ -63,7 +63,7 @@ def load_and_save_dataset(
     dataset_name: str,
     dataset_dir: str,
     dataset_config: str = None
-): # -> Union[load_dataset, Exception]:
+):  # -> Union[load_dataset, Exception]:
     """
     Load and save datasets from and to <dataset_dir>/<dataset_name>/[config_name]
     """
@@ -95,7 +95,7 @@ def load_and_save_dataset(
 def _download_dataset(
     dataset_name: str,
     dataset_config: str = None
-): # -> Union[load_dataset, Exception]:
+):  # -> Union[load_dataset, Exception]:
     """
     Download and return <dataset_name> with [dataset_config] from Hugging Face
     """
@@ -112,7 +112,7 @@ def _download_dataset(
 def load_and_save_tokenizer(
     model_name: str,
     tokenizer_dir: str
-): # -> Union[AutoTokenizer, Exception]:
+):  # -> Union[AutoTokenizer, Exception]:
     """
     Load and save tokenizer from and to
         <tokenizer_dir>/<model_name>
@@ -146,7 +146,7 @@ def load_and_save_tokenizer(
 def load_and_save_metrics(
     metrics_to_load: list[str],
     # metrics_dir: str = None
-) -> dict[str, dict[str, Union[load_metric, Exception]]]:
+):  # -> dict[str, dict[str, Union[load_metric, Exception]]]:
     """
     Load and save metrics with Metrics Builder Scripts from and to
     <metrics_dir>/<metric_name>

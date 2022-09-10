@@ -48,7 +48,7 @@ from logging import basicConfig, DEBUG, debug
 # ###
 log_level = DEBUG
 log_format = '[%(levelname)s] %(asctime)s - %(process)d - %(message)s'
-basicConfig(level = log_level, format = log_format)
+basicConfig(level=log_level, format=log_format)
 
 # %% [markdown]
 # ## Papermill parameters
