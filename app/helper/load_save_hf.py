@@ -13,7 +13,7 @@ TODO use @property and @<property>.setter to avoid get/set()
 
 from os import makedirs
 from os.path import exists
-from typing import Union
+# from typing import Union
 from logging import basicConfig, DEBUG, error
 
 from transformers import AutoModel, AutoTokenizer
