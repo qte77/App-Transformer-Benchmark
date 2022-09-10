@@ -1,7 +1,7 @@
-#https://papermill.readthedocs.io/en/latest/usage-execute.html#using-a-parameters-file
-#https://papermill.readthedocs.io/en/latest/usage-execute.html#note-about-using-yaml
-#papermill local/input.ipynb s3://bkt/output.ipynb -f <param.yml>
 ---
+# https://papermill.readthedocs.io/en/latest/usage-execute.html#using-a-parameters-file
+# https://papermill.readthedocs.io/en/latest/usage-execute.html#note-about-using-yaml
+# papermill local/input.ipynb s3://bkt/output.ipynb -f <param.yml>
 x:
   - 0.0
   - 1.0

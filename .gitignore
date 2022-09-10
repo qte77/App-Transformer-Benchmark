@@ -1,14 +1,23 @@
+# ignores for building the README dir tree
+.git
+
 # app
 .wandb/
 *__secret__*
 *.key.json
 *.key
+paramdict.json
+paramobj.json
+Parameters.json
 
-# editors 
+# editors
 .vscode/
 .idea/
 
-# pytest
+# check
+.pre-commit-config.yaml
+
+# test
 .pytest_cache/
 
 # linter, formatter
@@ -23,6 +32,10 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+Pipfile
+# exclude .lock to avoid os specifics
+poetry.lock
+pipfile.lock
 .Python
 env/
 build/
@@ -39,6 +52,8 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+whl/
+wheel/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -77,3 +92,6 @@ target/
 
 # pyenv python configuration file
 .python-version
+
+# python importtime and tuna visualizer
+importtime/

@@ -1,0 +1,14 @@
+---
+save_dir: "~/App"
+config_fn:
+  - "defaults"
+  - "task"
+  - "huggingface"
+  - "wandb"
+  - "sweep"
+  - "sweep-wandb"
+sweep_provider:
+  - "wandb"
+keyfiles:
+  wandb: "~/wandb.key.yml"
+...
