@@ -18,6 +18,15 @@ Types of changes:
 [Unreleased]
 ---
 
+### Added
+
+- CodeFactor.io badge to `README.md`
+- `.cirrus.yml`
+
+### Changed
+
+- Restructured
+
 [1.0.0] - 2022-08-05
 ---
 

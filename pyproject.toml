@@ -1,6 +1,55 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+version = "3.0.0"
+name = "App-K8s-HF-WnB"
+description = "End-to-end K8s app with Hugging Face and Weights&Biases"
+license = "BSD 3-Clause"
+authors = ["qte77 <qte77>"]
+readme = "README.md"
+repository = "https://github.com/qte77/App-K8s-HF-WnB"
+documentation = "https://github.com/qte77/App-K8s-HF-WnB/docs"
+keywords= ["ML", "Docker", "Kubernetes", "Hugging Face", "Weights&Biases"]
+
+[tool.poetry.urls]
+"Issues" = "https://github.com/qte77/App-K8s-HF-WnB/issues"
+"Personal website" = "https://qte77.github.io"
+
+[tool.poetry.dependencies]
+datasets = "==2.3.2"
+PyYAML = "*"
+transformers = "==4.19.4"
+wandb = "==0.12.21"
+watermark = "*"
+# torch = "*"
+# transformers "==4.20.1"
+# torch ==1.11.0 #+cu113"
+# numpy = "==1.21.6"
+# hydra= "==1.2"
+# omegaconf= "2.2.2"
+# https://download.pytorch.org/whl/cu113/torch-1.11.0%2Bcu113-cp38-cp38-linux_x86_64.whl
+# git+https://github.com/huggingface/transformers
+
+[tool.poetry.dev-dependencies]
+black = "*"
+"blacken-docs" = "*"
+bump2version = "*"
+flake8 = "*"
+isort = "*"
+mypy = "*"
+"pre-commit" = "*"
+pyupgrade = "*"
+"pytest-cov" = "*"
+# pytest = "*"
+# tox = "*"
+# watchdog = "==2.1.9"
+# sphinx = "==5.0.2"
+
 [tool.isort]
 profile = "black"
-# src_paths = ["app", "tests"]
+src_paths = ["app", "tests"]
 
 [tool.black]
 line_length = 88
@@ -22,3 +71,32 @@ log_date_format = "%Y-%m-%d %H:%M:%S"
 #    "requires_gpu: mark a test that requires a GPU to run.",
 #    "slow: mark a test that takes a long time to run.",
 # ]
+
+# https://pypi.org/project/interrogate/
+[tool.interrogate]
+fail-under = 95
+exclude = ["setup.py", "docs", "build", "tests"]
+# ignore-regex = ["^get$", "^mock_.*", ".*BaseClass.*"]
+# possible values: 0 (minimal output), 1 (-v), 2 (-vv)
+verbose = 0
+
+# https://mypy.readthedocs.io/en/stable/config_file.html#using-a-pyproject-toml
+# https://mypy.readthedocs.io/en/stable/config_file.html#example-pyproject-toml
+[tool.mypy]
+warn_unused_configs = true
+warn_unused_ignores = true
+warn_unreachable = true
+warn_return_any = true
+
+# [[tool.mypy.overrides]]
+# module = 'mypy-pytest'
+# ignore_missing_imports = true
+
+# src: https://github.com/aio-libs/aiohttp
+# [tool.towncrier]
+# package = "aiohttp"
+# filename = "CHANGES.rst"
+# directory = "CHANGES/"
+# title_format = "{version} ({project_date})"
+# template = "CHANGES/.TEMPLATE.rst"
+# issue_format = "`#{issue} <https://github.com/aio-libs/aiohttp/issues/{issue}>`_"
