@@ -20,18 +20,11 @@ Quickstart
 
 Explore the app with Jupyter notebooks.
 
-* [App](./ipynb/app.ipynb) &nbsp;
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qte77/App-BERT-Benchmark/HEAD?urlpath=lab/tree/app/ipynb/app.ipynb)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/app.ipynb)
-[![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/app.ipynb)
-* [HF-WnB-PoC](./ipynb/HF-WnB-PoC.ipynb) &nbsp;
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qte77/App-BERT-Benchmark/HEAD?urlpath=lab/tree/app/ipynb/HF-WnB-PoC.ipynb)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PoC.ipynb)
-[![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PoC.ipynb)
-* [HF-WnB-PyTorch-Sweeps-PoC](./app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb) &nbsp;
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qte77/App-BERT-Benchmark/HEAD?urlpath=lab/tree/app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb)
-[![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb)
+| Notebook |  |  |  |
+| - | - | - | - |
+| [App](./ipynb/app.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qte77/App-BERT-Benchmark/HEAD?urlpath=lab/tree/app/ipynb/app.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/app.ipynb) | [![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/app.ipynb) |
+| [HF-WnB-PoC](./ipynb/HF-WnB-PoC.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qte77/App-BERT-Benchmark/HEAD?urlpath=lab/tree/app/ipynb/HF-WnB-PoC.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PoC.ipynb) | [![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PoC.ipynb) |
+| [HF-WnB-PyTorch-Sweeps-PoC](./app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qte77/App-BERT-Benchmark/HEAD?urlpath=lab/tree/app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb) | [![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb) |
 
 TOC
 ---
@@ -51,9 +44,7 @@ Usage [↑](#toc)
 
 ### Run
 
-* Plain py train mode: `make train_py`
-* Plain py infer mode: `make infer_py`
-* Papermill: `exec_nb_full`
+* **TODO**
 
 ### Credentials
 
@@ -64,8 +55,7 @@ Usage [↑](#toc)
 Install [↑](#toc)
 ---
 
-* Local: `make setup_local`
-* Local dev: `make setup_local_dev`
+* **TODO**
 
 Reason [↑](#toc)
 ---
@@ -91,29 +81,13 @@ App structure [↑](#toc)
 <pre>
 /
 ├─ app/
-│  ├─ config/
-│  │  ├─ huggingface.yml
-│  │  ├─ papermill.yml
-│  │  ├─ wandb.yml
-│  │  └─ wandb-sweep.yml
-│  ├─ helper/
-│  │  ├─ [__init__.py]
-│  │  ├─ load_config.py
-│  │  └─ load_save_hf.py
-│  ├─ ipynb/
-│  │  └─ [app.ipynb]
-│  ├─ model/
-│  │  ├─ [__init__.py]
-│  │  ├─ infer_model.py
-│  │  └─ train_model.py
-│  ├─ .python-version
-│  ├─ __main__.py
-│  ├─ __version__.py
-│  ├─ app.py
-│  ├─ Pipfile
-│  └─ [Pipfile.lock]
+├─ assets/
+├─ tests/
+├─ CHANGELOG.md
+├─ Dockerfile
 ├─ Makefile
-└─ [Setup.py]
+├─ pyproject.toml
+└─ README.md
 </pre>
 </details>
 
@@ -124,21 +98,16 @@ App structure [↑](#toc)
 /
 ├─ .github/
 │  ├─ workflows/
-│  │  ├─ codeql.yml
-│  │  ├─ links-fail-fast.yml
-│  │  └─ linter.yml
+│  │  └─ links-fail-fast.yml
 │  └─ dependabot.yml
 ├─ app/
 │  ├─ config/
+│  │  ├─ defaults.yml
 │  │  ├─ huggingface.yml
 │  │  ├─ papermill.yml
-│  │  ├─ wandb.yml
-│  │  ├─ wandb-key-dummy.yml
-│  │  └─ wandb-sweep.yml
-│  ├─ helper/
-│  │  ├─ [__init__.py]
-│  │  ├─ load_config.py
-│  │  └─ load_save_hf.py
+│  │  ├─ wandb-sweep.yml
+│  │  ├─ wandb.key.dummy.yml
+│  │  └─ wandb.yml
 │  ├─ [html/]
 │  ├─ ipynb/
 │  │  ├─ [app.ipynb]
@@ -150,21 +119,30 @@ App structure [↑](#toc)
 │  │  ├─ [__init__.py]
 │  │  ├─ infer_model.py
 │  │  └─ train_model.py
-│  ├─ .python-version
+│  ├─ utils/
+│  │  ├─ load_config.py
+│  │  └─ load_save_hf.py
 │  ├─ __main__.py
 │  ├─ __version__.py
 │  ├─ app.py
-│  ├─ Pipfile
-│  └─ [Pipfile.lock]
+│  └─ py.typed
 ├─ assets/
 │  └─ ML-Pipeline-HF-WnB.draw.io.png
+├─ tests/
+├─ .bumpversion.cfg
+├─ .cirrus.yml
+├─ .coveragerc
+├─ .flake8
+├─ .gitattributes
 ├─ .gitignore
 ├─ .gitmessage
+├─ .markdownlint.yml
+├─ .yamllint.yml
 ├─ CHANGELOG.md
 ├─ LICENSE
 ├─ Makefile
-├─ README.md
-└─ [Setup.py]
+├─ pyproject.toml
+└─ README.md
 </pre>
 </details>
 
