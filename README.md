@@ -5,6 +5,7 @@ ML Pipeline
 [![CodeFactor](https://www.codefactor.io/repository/github/qte77/App-BERT-Benchmark/badge)](https://www.codefactor.io/repository/github/qte77/App-BERT-Benchmark)
 [![Links (Fail Fast)](https://github.com/qte77/ML-HF-WnB-MVP/actions/workflows/links-fail-fast.yml/badge.svg)](https://github.com/qte77/ML-HF-WnB-MVP/actions/workflows/links-fail-fast.yml)
 [![wakatime](https://wakatime.com/badge/github/qte77/App-BERT-Benchmark.svg)](https://wakatime.com/badge/github/qte77/App-BERT-Benchmark)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/qte77/App-BERT-Benchmark)
 
 App for benchmarking different BERT-Architectures using a pipeline with Hugging Face (HF) and Weights&Biases (WandB).
 
@@ -22,8 +23,8 @@ Explore the app with Jupyter notebooks.
 
 | Notebook |  |  |  |
 | - | - | - | - |
-| [App](./ipynb/app.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qte77/App-BERT-Benchmark/HEAD?urlpath=lab/tree/app/ipynb/app.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/app.ipynb) | [![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/app.ipynb) |
-| [HF-WnB-PoC](./ipynb/HF-WnB-PoC.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qte77/App-BERT-Benchmark/HEAD?urlpath=lab/tree/app/ipynb/HF-WnB-PoC.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PoC.ipynb) | [![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PoC.ipynb) |
+| [App](./app/ipynb/app.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qte77/App-BERT-Benchmark/HEAD?urlpath=lab/tree/app/ipynb/app.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/app.ipynb) | [![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/app.ipynb) |
+| [HF-WnB-PoC](./app/ipynb/HF-WnB-PoC.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qte77/App-BERT-Benchmark/HEAD?urlpath=lab/tree/app/ipynb/HF-WnB-PoC.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PoC.ipynb) | [![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PoC.ipynb) |
 | [HF-WnB-PyTorch-Sweeps-PoC](./app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/qte77/App-BERT-Benchmark/HEAD?urlpath=lab/tree/app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb) | [![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/qte77/App-BERT-Benchmark/blob/main/app/ipynb/HF-WnB-PyTorch-Sweeps-PoC.ipynb) |
 
 TOC
@@ -116,7 +117,6 @@ App structure [↑](#toc)
 │  │  └─ [converted-by-jupytext.ipynb]
 │  ├─ [md/]
 │  ├─ model/
-│  │  ├─ [__init__.py]
 │  │  ├─ infer_model.py
 │  │  └─ train_model.py
 │  ├─ utils/
@@ -127,6 +127,7 @@ App structure [↑](#toc)
 │  ├─ app.py
 │  └─ py.typed
 ├─ assets/
+│  ├─ ML-Pipeline-HF-WnB-Parametrization.draw.io.png
 │  └─ ML-Pipeline-HF-WnB.draw.io.png
 ├─ tests/
 ├─ .bumpversion.cfg
@@ -151,16 +152,18 @@ App Details [↑](#toc)
 
 ### Simple pipeline with commercial vendors
 
-* SCM with [Github](https://Github.com)
-* Logging, monitoring, alerting, model-versioning, -visualizing and -sweeping with [Weights & Biases](https://wandb.ai)
-* Pre-trained models and tokenizers as well as metrics and curated datasets from [Hugging Face](https://huggingface.co)
-* Explorative prototyping with [Jupyter-Notebooks](https://jupyter.org/)
-* Compute resources from [Google Colab](https://colab.research.google.com)
+<img src="./assets/ML-Pipeline-HF-WnB.draw.io.png#gh-light-mode-only" alt="ML-Pipeline-HF-WnB.draw.io.png" width="50%" height="50%" />
+<img src="./assets/ML-Pipeline-HF-WnB-dark.draw.io.png#gh-dark-mode-only" alt="ML-Pipeline-HF-WnB-dark.draw.io.png" width="50%" height="50%" />
 
-  <img src="./assets/ML-Pipeline-HF-WnB.draw.io.png" alt="ML-Pipeline-HF-WnB.draw.io.png" width="50%" height="50%" />
+### Parametrization depending on path
+
+<img src="./assets/ML-Pipeline-HF-WnB-Parametrization.draw.io.png#gh-light-mode-only" alt="ML-Pipeline-HF-WnB.draw.io.png" width="50%" height="50%" />
+<img src="./assets/ML-Pipeline-HF-WnB-Parametrization-dark.draw.io.png#gh-dark-mode-only" alt="ML-Pipeline-HF-WnB-dark.draw.io.png" width="50%" height="50%" />
 
 ### Tools used
 
+* [Github](https://Github.com)
+  * SCM and VCS
 * Jupyter notebooks (.ipynb), [Website](https://jupyter.org), [Docs](https://docs.jupyter.org/), [Github](https://github.com/jupyter/jupyter)
   * [Try (GCP, OVH)](https://jupyter.org/try), [Demo Notebooks (GCE)](https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/HEAD?urlpath=lab/tree/demo), [Demo Source on GH](https://github.com/jupyterlab/jupyterlab-demo/)
   * Explore, modify, iterate, share
@@ -176,10 +179,12 @@ App Details [↑](#toc)
   * Create reports for specific param-set
   * Reproduce experiments by using template ipynb, save output ipynb
 * Hugging Face, [Website](https://huggingface.co/), [Docs](https://huggingface.co/docs/), [Github](https://github.com/huggingface/)
+  * Pre-trained models and tokenizers as well as metrics and curated datasets
   * 'The AI community building the future.'
   * 'Build, train and deploy state of the art models powered by the reference open source in machine learning.'
   * Products: Models, Datasets, Tasks, Metrics, Tokenizer
 * WandB, [Website](https://wandb.ai/site), [Docs](https://wandb.ai/site), [Github](https://github.com/wandb)
+  * Logging, monitoring, alerting, model-versioning, -visualizing and -sweeping
   * 'The developer-first MLOps platform'
   * 'Build better models faster with experiment tracking, dataset versioning, and model management'
   * Products: Dashboard, Sweeps, Artifacts, Reports, Tables

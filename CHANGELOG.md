@@ -22,6 +22,8 @@ Types of changes:
 
 - CodeFactor.io badge to `README.md`
 - `.cirrus.yml`
+- `assets/ML-Pipeline-HF-WnB-Parametrization.draw.io.png`
+- Badge to open repo in Visual Studio Code online
 
 ### Changed
 
